@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="container container-content">
+    <h1>Конвертер валют</h1>
+
+    <div class="currency" *ngIf="currencies$ | async as currencies">
+      <div
+        class="currency-item"
+        *ngFor="let currency of currencies | slice: 0:2"
+      >
+        <div class="currency-item-title">Курс {{ currency.ccy }}</div>
+        <div class="currency-item-value">
+          {{ currency.buy }}
+        </div>
+        <div class="currency-item-value">
+          {{ currency.sale }}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

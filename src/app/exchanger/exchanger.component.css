@@ -1,0 +1,73 @@
+
+  .wrapper{
+    width: 600px;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0px 5px 20px 20px rgb(0 0 0 / 5%);
+  }
+
+  .wrapper .drop-list{
+    margin: 40px 0 20px 0;
+  }
+  .drop-list :where(input, select, button){
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+  }
+ p{
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .from,.to {
+      display: flex;
+  }
+input{
+    height: 50px;
+    font-size: 17px;
+    padding: 0 15px;
+    border: 1px solid #999;
+    font-size: 24px;
+
+  }
+input:focus{
+    padding: 0 14px;
+    border: 2px solid #675AFE;
+  }
+.drop-list{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .drop-list .input{
+    display: flex;
+    width: 115px;
+    height: 45px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    border: 1px solid #999;
+  }
+
+ select{
+    width: auto;
+    background: none;
+    margin: 0 -5px 0 5px;
+    font-size: 24px;
+
+  }
+  select::-webkit-scrollbar{
+    width: 8px;
+  }
+select::-webkit-scrollbar-track{
+    background: #fff;
+  }
+ select::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 8px;
+    border-right: 2px solid #ffffff;
+  }

@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <div class="drop-list">
+    <div>
+      <p>From</p>
+      <div class="from">
+        <input
+          type="number"
+          min="0"
+          class="input"
+          #from
+          (input)="exchangerFrom(from.value)"
+          [ngModel]="counterFrom"
+        />
+        <select #fromRate (input)="exchangerRateFrom(fromRate.value)">
+          <option
+            *ngFor="let symbol of rates$ | keyvalue"
+            value="{{ symbol.key }}"
+          >
+            {{ symbol.key }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <p>To</p>
+      <div class="to">
+        <input
+          class="input"
+          type="number"
+          min="0"
+          #to
+          (input)="exchangerTo(to.value)"
+          [ngModel]="counterTo"
+        />
+        <select #toRate (input)="exchangerRateTo(toRate.value)">
+          <option
+            *ngFor="let symbol of rates$ | keyvalue"
+            value="{{ symbol.key }}"
+          >
+            {{ symbol.key }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
